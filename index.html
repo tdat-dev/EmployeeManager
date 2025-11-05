@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HRM System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="brand">
+            <i class="fas fa-users-cog"></i>
+            <a href="index.html"><span>HRM System</span></a>
+          </div>
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="user-profile">
+          <div class="user-avatar">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <div class="user-info">
+            <div class="user-name">Admin</div>
+            <div class="user-role">Quản trị viên</div>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <button data-route="dashboard" class="menu-item">
+            <i class="fas fa-th-large"></i>
+            <span>Dashboard</span>
+          </button>
+
+          <div class="menu-section">
+            <div class="menu-section-title">
+              <i class="fas fa-users"></i>
+              <span>Nhân viên</span>
+            </div>
+            <button data-route="employees-add" class="menu-item">
+              <i class="fas fa-user-plus"></i>
+              <span>Thêm Nhân viên</span>
+            </button>
+          </div>
+
+          <button id="logoutBtn" class="menu-item logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Đăng xuất</span>
+          </button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <h1 id="pageTitle">Dashboard</h1>
+          <button id="themeToggle" class="secondary">Toggle Theme</button>
+        </header>
+
+        <section id="view" class="view"></section>
+      </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
