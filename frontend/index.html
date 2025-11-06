@@ -34,7 +34,7 @@
         </div>
 
         <nav class="menu">
-          <button data-route="dashboard" class="menu-item">
+          <button data-route="dashboard" class="menu-item active">
             <i class="fas fa-th-large"></i>
             <span>Dashboard</span>
           </button>
@@ -44,9 +44,55 @@
               <i class="fas fa-users"></i>
               <span>Nhân viên</span>
             </div>
+            <button data-route="employee-db" class="menu-item">
+              <i class="fas fa-database"></i>
+              <span>Danh sách Nhân viên</span>
+            </button>
             <button data-route="employees-add" class="menu-item">
               <i class="fas fa-user-plus"></i>
               <span>Thêm Nhân viên</span>
+            </button>
+            <button data-route="employee-search" class="menu-item">
+              <i class="fas fa-search"></i>
+              <span>Tìm kiếm</span>
+            </button>
+          </div>
+
+          <div class="menu-section">
+            <div class="menu-section-title">
+              <i class="fas fa-sitemap"></i>
+              <span>Tổ chức</span>
+            </div>
+            <button data-route="departments" class="menu-item">
+              <i class="fas fa-building"></i>
+              <span>Phòng ban</span>
+            </button>
+            <button data-route="positions" class="menu-item">
+              <i class="fas fa-briefcase"></i>
+              <span>Chức vụ</span>
+            </button>
+          </div>
+
+          <div class="menu-section">
+            <div class="menu-section-title">
+              <i class="fas fa-tasks"></i>
+              <span>Vận hành</span>
+            </div>
+            <button data-route="salary" class="menu-item">
+              <i class="fas fa-money-bill-wave"></i>
+              <span>Quản lý Lương</span>
+            </button>
+            <button data-route="attendance" class="menu-item">
+              <i class="fas fa-clock"></i>
+              <span>Chấm công</span>
+            </button>
+            <button data-route="leave" class="menu-item">
+              <i class="fas fa-calendar-times"></i>
+              <span>Nghỉ phép</span>
+            </button>
+            <button data-route="performance" class="menu-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Hiệu suất</span>
             </button>
           </div>
 
@@ -67,6 +113,6 @@
       </main>
     </div>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
