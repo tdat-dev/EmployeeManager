@@ -18,6 +18,12 @@ class DepartmentModel {
 
         return $stmt->execute([$name]);
     }
+
+    public function delete($id){
+        $sql = "DELETE FROM departments WHERE id = ?";
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute([$id]);
+    }
 }
 
 ?>

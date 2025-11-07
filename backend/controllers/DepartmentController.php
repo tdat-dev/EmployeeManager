@@ -33,6 +33,24 @@ class DepartmentController {
             echo json_encode(['success'=> false,'message'=> "LỖI: Không thể tạo phòng ban"]);
         }
     }
+
+    public function deleteDepartment(){
+        // Tìm GET cái id
+        $id = $_GET["id"] ?? null;
+
+        if(!$id){
+            echo json_encode(["success"=> false,"message"=> "ID phòng ban là bắt buộc."]);
+            return;
+        }
+        // Nếu success thì delete ID đó
+        $success = $this->model->delete($id);
+
+        if($success){
+            echo json_encode(["success"=> true, "message"=> "Đã xoá thành công phòng ban"]);
+        } else{
+            echo json_encode(['success' => false, 'message'=> "LỖI: Không thể xoá phòng ban"]);
+        }
+    }
 }
 
 ?>
