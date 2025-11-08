@@ -114,5 +114,26 @@
 </div>
 
 <script src="js/app.js" type="module"></script>
+<div id="editModalOverlay" class="modal-overlay">
+
+    <div class="modal-content card">
+        <h2 id="editModalTitle">Sửa Tên Phòng ban</h2>
+
+        <form id="editDepartmentForm">
+
+            <input type="hidden" id="editDepartmentId">
+
+            <div>
+                <label for="editDepartmentName">Tên Phòng ban:</label>
+                <input type-="text" id="editDepartmentName" required>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" id="editModalCancelBtn" class="secondary">Hủy</button>
+                <button type="submit" id="editModalSaveBtn" class="primary">Lưu Thay đổi</button>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>

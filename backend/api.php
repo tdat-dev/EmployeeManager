@@ -17,7 +17,7 @@ try {
             } elseif ($method === 'DELETE') {
                 $controller->deleteDepartment();
             } elseif ($method === 'PUT') {
-                $controller->updateDepartments();
+                $controller->updateDepartment();
             } else {
                 $controller->getAllDepartments();
             }

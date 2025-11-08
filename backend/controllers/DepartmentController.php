@@ -56,14 +56,16 @@ class DepartmentController
         }
     }
 
-    public function updateDepartments()
+    public function updateDepartment()
     {
+        // Lấy ID từ url
         $id = $_GET["id"] ?? null;
+
         $json_data = file_get_contents('php://input');
         $data = json_decode($json_data);
         $name = $data->name ?? null;
 
-        if (!$id || $name) {
+        if (!$id || !$name) {
             echo json_encode(['success' => false, 'message' => 'Cả ID và Tên phòng ban mới đều là bắt buộc.']);
             return;
         }
